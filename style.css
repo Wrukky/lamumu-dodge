@@ -41,4 +41,20 @@ canvas{display:block;width:100vw;height:100vh}
 @media (max-width:899px){
   #hud{left:8px;right:8px}
 }
+#twitterHandle {
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  z-index: 9999;
+  text-decoration: none;
+}
+
+#twitterHandle:hover {
+  text-decoration: underline;
+
 
