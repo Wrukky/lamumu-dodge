@@ -7,6 +7,37 @@ canvas.width = W; canvas.height = H;
 
 let playerImg = null;
 let playerName = null;
+// Touch controls
+let touchStartX = null;
+let touchCurrentX = null;
+
+const gameCanvas = document.getElementById('gameCanvas');
+
+gameCanvas.addEventListener('touchstart', (e) => {
+  if (!state.running) return;
+
+  // Record starting position
+  touchStartX = e.touches[0].clientX;
+  touchCurrentX = touchStartX;
+
+  // Single tap detection (shoot)
+  if (e.touches.length === 1) {
+    shootBullet();
+  }
+});
+
+gameCanvas.addEventListener('touchmove', (e) => {
+  if (!state.running) return;
+
+  touchCurrentX = e.touches[0].clientX;
+
+  // Movement calculation
+  let dx = touchCurrentX - touchStartX;
+
+  // Adjust player position based on swipe distance
+  state.player.x += dx * 0.5; // Sensitivity factor
+  touchStartX = touchCurrentX; // Update for next frame
+});
 
 // Character selection with music start
 document.querySelectorAll('#characterSelect img').forEach(img => {
@@ -383,3 +414,4 @@ function init(){
 
 
 init();
+
