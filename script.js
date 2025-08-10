@@ -35,7 +35,7 @@ gameCanvas.addEventListener('touchmove', (e) => {
   let dx = touchCurrentX - touchStartX;
 
   // Adjust player position based on swipe distance
-  state.player.x += dx * 0.5; // Sensitivity factor
+  state.player.x += dx * 0.9; // Sensitivity factor
   touchStartX = touchCurrentX; // Update for next frame
 });
 
@@ -414,5 +414,6 @@ function init(){
 
 
 init();
+
 
 
