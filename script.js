@@ -330,11 +330,11 @@ function drawPlayer(ts){
   if(state.player.shield){
     ctx.save();
     ctx.beginPath();
-    ctx.arc(state.player.x, state.player.y, size*0.5, 0, Math.PI*2);
-    ctx.lineWidth = 6;
+    ctx.arc(state.player.x, state.player.y, size*0.4, 0, Math.PI*2);
+    ctx.lineWidth = 5;
     ctx.strokeStyle = 'rgba(241, 226, 13, 0.87)';
     ctx.shadowBlur = 24;
-    ctx.shadowColor = 'rgba(179, 179, 8, 0.6)';
+    ctx.shadowColor = 'rgba(128, 128, 3, 0.6)';
     ctx.stroke();
     ctx.restore();
   }
@@ -414,6 +414,7 @@ function init(){
 
 
 init();
+
 
 
 
