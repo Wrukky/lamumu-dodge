@@ -46,7 +46,7 @@ document.querySelectorAll('#characterSelect img').forEach(img => {
 
     // Play music inside the click handler so browser allows it
     const music = document.getElementById("bgMusic");
-    music.volume = 0.5;
+    music.volume = 0.8;
     music.play().catch(err => console.log("Music blocked:", err));
 
     startGame();
@@ -414,4 +414,5 @@ function init(){
 
 
 init();
+
 
