@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lamumu Dodge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="startScreen" class="overlay">
+    <h1>Lamumu Shooting</h1>
+    <p>Select your character</p>
+    <div id="characterSelect" class="chars">
+      <!-- Replace src with your actual image files -->
+      <img src="orange.png"     alt="orange"  data-name="orange">
+      <img src="blue.png"       alt="blue"    data-name="blue">
+      <img src="pink.png"       alt="pink"    data-name="pink">
+      <img src="purple.png"     alt="purple"  data-name="purple">
+      <img src="green.png"      alt="green"   data-name="green">
+    </div>
+    <small>Use arrows / WASD to move. Tap buttons on mobile. Space / tap to shoot.</small>
+    <audio id="bgMusic" src="game_background.mp3" loop></audio>
+
+  
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <div id="hud">
+    <div id="leftPane">
+      <div id="score">Stars: 0</div>
+      <div id="lives">Lives: 6</div>
+      <div id="status" class="small"></div>
+    </div>
+    <div id="rightPane">
+      <button id="shieldBtn" class="hudBtn" title="Shield (only visual)"></button>
+      <button id="boostBtn" class="hudBtn">⚡</button>
+    </div>
+  </div>
+
+  <div id="mobileControls">
+    <button id="leftBtn">◀</button>
+    <button id="shootBtn">🔫</button>
+    <button id="rightBtn">▶</button>
+    <button id="boostTouchBtn">⚡</button>
+  </div>
+
+  <div id="gameOver" class="overlay" style="display:none;">
+    <h2>Game Over</h2>
+    <p id="finalScore"></p>
+    <button id="restartBtn">Restart</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
